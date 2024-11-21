@@ -1,0 +1,92 @@
+﻿<Window x:Class="BMI_CALCULATOR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BMI_CALCULATOR"
+        mc:Ignorable="d"
+        Title="BMICalculator" Height="568"
+        Width="1024"
+        
+        
+        >
+    <Grid>
+        <StackPanel Grid.Column="0">
+            <Label Content="BMI CALCULATOR" HorizontalAlignment="Center"
+                   Foreground="red"
+                   FontSize="18"
+                   FontWeight="Bold"
+                   />
+            <Label Content="Enter Your Age" FontSize="14"/>
+            <TextBox x:Name="ageOfUser"
+                        Width="300" HorizontalAlignment="left" 
+                        Height="33"
+                        BorderThickness="3" FontSize="18"/>
+
+            <Label Content="Enter Your Height In Meter" FontSize="14"/>
+            <TextBox x:Name="heightOfUser"
+            Width="300" HorizontalAlignment="left" 
+            Height="33"
+            BorderThickness="3" FontSize="18"/>
+
+            <Label Content="Enter Your weight In KG" FontSize="14"/>
+            <TextBox x:Name="weightOfUser"
+Width="300" HorizontalAlignment="left" 
+Height="33"
+BorderThickness="3" FontSize="18"/>
+
+            <Button x:Name="Data" Content="Calculate" Width="210" 
+              HorizontalAlignment="Center" 
+                   Margin="0,10,0,0" Height="29"
+              Click="calculateBMI"
+                    FontSize="16"
+                    FontWeight="Bold"/>
+            <Label Content=""
+                   HorizontalAlignment="Left"
+                   Foreground="red"
+                   FontWeight="Bold"
+                   FontSize="20" 
+              x:Name="output"/>
+            <Label Content="Advice Specially for you :" FontSize="15" FontWeight="Bold"/>
+            <Label Content=""
+                   x:Name="advice" FontSize="15"
+                   />
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label Content="Feet To meter Conversion"
+                   FontSize="18px"
+                   FontWeight="Bold"
+                   Foreground="red"
+                   HorizontalAlignment="Center"/>
+            <TextBox x:Name="heightInFeetOfUser"
+            Width="300" HorizontalAlignment="Center" 
+            Height="33"
+            BorderThickness="3"
+                     Background="white"
+                     FontSize="18"
+                     
+                     />
+            <Button Content="Convert"
+                    Click="Convert"
+                    Width="200"
+                    Margin="5" Height="34"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    />
+            <Label Content=""
+                   HorizontalAlignment="Left"
+                   Foreground="red"
+                   FontWeight="Bold"
+                   FontSize="20"
+                   x:Name="meter"
+                   />
+        </StackPanel>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+            </ColumnDefinition>
+            <ColumnDefinition>
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+    </Grid>
+</Window>
